@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095039394336",
+    "project_id": "eval2-proyecto-practica",
+    "storage_bucket": "eval2-proyecto-practica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095039394336:android:8d7bcfa3e514d2931ed245",
+        "android_client_info": {
+          "package_name": "com.example.eval2_ordinaria_proyecto_prctica"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOZF-34irDFN6qKaLGCbYmpY47PUrtvME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
