@@ -22,10 +22,10 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
-        // Inicializar Firebase Auth
+
         auth = Firebase.auth
 
-        // Referencias a las vistas
+
         editTextEmail = findViewById(R.id.editTextEmailRegister)
         editTextPassword = findViewById(R.id.editTextPasswordRegister)
         editTextUser = findViewById(R.id.editTextUserRegister)
@@ -59,12 +59,10 @@ class RegistroActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Registro exitoso, navegar a LoginActivity
                     Toast.makeText(this, "Registro exitoso.", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()
                 } else {
-                    // Si el registro falla, muestra un mensaje al usuario.
                     Toast.makeText(this, "Registro fallido: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }

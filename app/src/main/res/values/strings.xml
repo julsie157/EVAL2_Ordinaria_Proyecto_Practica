@@ -2,4 +2,9 @@
     <string name="app_name">EVAL2_Ordinaria_Proyecto_Práctica</string>
     <string name="crear_cuenta"><u>Registrarse</u></string>
     <string name="profile"><u>Perfil</u></string>
+
+    <string name="user_icon_description">Usuario</string>
+    <string name="series_icon_description">Series</string>
+    <string name="movies_icon_description">Pelis</string>
+    <string name="image_desc">Descipcion</string>
 </resources>

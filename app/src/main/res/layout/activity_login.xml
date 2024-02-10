@@ -12,7 +12,7 @@
         android:layout_width="325dp"
         android:layout_height="325dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextUserLogin"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCorreoLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -81,7 +81,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextUserLogin"
+        android:id="@+id/editTextCorreoLogin"
         android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
@@ -92,7 +92,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:foregroundTint="#fff"
-        android:hint="Username"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:padding="8dp"
         android:textColorHint="#37474F"

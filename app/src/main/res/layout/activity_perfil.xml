@@ -8,4 +8,86 @@
     tools:context=".PerfilActivity" >
 
 
+    <ImageView
+        android:id="@+id/imageViewPerfil"
+        android:layout_width="199dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/botonAtrasInfo"
+        android:layout_width="131dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Atrás"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEmailPerfil"
+        android:layout_width="325dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/sobre"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColorHint="#37474F"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewPerfil" />
+
+
+    <TextView
+        android:id="@+id/textViewPasswordPerfil"
+        android:layout_width="325dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/pass"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColorHint="#37474F"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmailPerfil" />
+
+
+    <TextView
+        android:id="@+id/textViewUserPerfil"
+        android:layout_width="325dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColorHint="#37474F"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPasswordPerfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
