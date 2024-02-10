@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "nombre": "Inception",
+    "nombre": "Origen",
     "sinopsis": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños, se le da la tarea inversa de plantar una idea en la mente de un CEO.",
-    "imagen": "https://example.com/imagen_inception.jpg",
+    "imagen": "https://pics.filmaffinity.com/inception-652954101-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0"
   },
   {
     "id": 2,
-    "nombre": "The Shawshank Redemption",
+    "nombre": "Cadena Perpetua",
     "sinopsis": "Condenado por el asesinato de su esposa e hijo, un banquero es enviado a Shawshank, una prisión de alta seguridad, donde descubre el valor de la vida tras las rejas.",
-    "imagen": "https://example.com/imagen_shawshank_redemption.jpg",
+    "imagen": "https://pics.filmaffinity.com/the_shawshank_redemption-576140557-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=6hB3S9bIaco"
   },
   {
@@ -22,121 +22,121 @@
   },
   {
     "id": 4,
-    "nombre": "The Dark Knight",
+    "nombre": "El caballero Oscuro",
     "sinopsis": "Cuando la amenaza conocida como el Joker emerge del pasado de Gotham, Batman debe aceptar una de las mayores pruebas psicológicas y físicas para luchar contra la injusticia.",
-    "imagen": "https://example.com/imagen_the_dark_knight.jpg",
+    "imagen": "https://pics.filmaffinity.com/the_dark_knight-102763119-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
   },
   {
     "id": 5,
-    "nombre": "The Matrix",
+    "nombre": "Matrix",
     "sinopsis": "Un programador de computadoras es llevado a rebelarse contra las máquinas, que ahora dominan el mundo y esclavizan a la humanidad.",
-    "imagen": "https://example.com/imagen_the_matrix.jpg",
+    "imagen": "https://pics.filmaffinity.com/the_matrix-155050517-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=vKQi3bBA1y8"
   },
   {
     "id": 6,
     "nombre": "Dune",
     "sinopsis": "La historia de Paul Atreides, un joven brillante y talentoso nacido en un gran destino más allá de su comprensión, que debe viajar al planeta más peligroso del universo para asegurar el futuro de su familia y su pueblo.",
-    "imagen": "https://example.com/imagen_dune.jpg",
+    "imagen": "https://pics.filmaffinity.com/dune-209834814-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=n9xhJrPXop4"
   },
   {
     "id": 7,
     "nombre": "Joker",
     "sinopsis": "En Gotham City, el comediante de fracaso Arthur Fleck se encuentra aislado, despreciado y maltratado por la sociedad. Entonces, él se embarca en un camino de revolución y crímenes sangrientos. Este camino lo lleva cara a cara con su alter ego: el Joker.",
-    "imagen": "https://example.com/imagen_joker.jpg",
+    "imagen": "https://pics.filmaffinity.com/joker-790658206-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=zAGVQLHvwOY"
   },
   {
     "id": 8,
     "nombre": "Parasite",
     "sinopsis": "La codicia y la discriminación de clases amenazan la recién formada relación simbiótica entre la rica familia Park y la pobre familia Kim.",
-    "imagen": "https://example.com/imagen_parasite.jpg",
+    "imagen": "https://pics.filmaffinity.com/gisaengchung-432616131-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=5xH0HfJHsaY"
   },
   {
     "id": 9,
-    "nombre": "Arrival",
+    "nombre": "La llegada",
     "sinopsis": "Una lingüista es reclutada por el ejército para ayudar a traducir las comunicaciones de alienígenas que han aterrizado en todo el mundo, llevando a un planeta al borde de la guerra global.",
-    "imagen": "https://example.com/imagen_arrival.jpg",
+    "imagen": "https://pics.filmaffinity.com/arrival-150207636-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=tFMo3UJ4B4g"
   },
   {
     "id": 10,
-    "nombre": "Mad Max: Fury Road",
+    "nombre": "Mad Max: Furia en la carretera",
     "sinopsis": "En un desierto post-apocalíptico, Max se une a Furiosa, una mujer que intenta cruzar el desierto para regresar a su tierra natal, escapando de un señor de la guerra y sus secuaces.",
-    "imagen": "https://example.com/imagen_mad_max_fury_road.jpg",
+    "imagen": "https://pics.filmaffinity.com/mad_max_fury_road-429261909-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=hEJnMQG9ev8"
   },
   {
     "id": 11,
     "nombre": "Blade Runner 2049",
     "sinopsis": "Un joven blade runner, K, descubre un secreto largo tiempo oculto que podría sumir lo que queda de la sociedad en el caos. Su descubrimiento lo lleva en una búsqueda para encontrar a Rick Deckard, un antiguo blade runner que ha estado desaparecido por 30 años.",
-    "imagen": "https://example.com/imagen_blade_runner_2049.jpg",
+    "imagen": "https://pics.filmaffinity.com/blade_runner_2049-681477614-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=gCcx85zbxz4"
   },
   {
     "id": 12,
-    "nombre": "La La Land",
+    "nombre": "La ciudad de las estrellas (La La Land)",
     "sinopsis": "Mientras persiguen sus sueños en Los Ángeles, un pianista de jazz y una aspirante a actriz se enamoran, pero su relación se ve desafiada por las esperanzas y sueños que los unieron.",
-    "imagen": "https://example.com/imagen_la_la_land.jpg",
+    "imagen": "https://pics.filmaffinity.com/la_la_land-262021831-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=0pdqf4P9MB8"
   },
   {
     "id": 13,
     "nombre": "Moonlight",
     "sinopsis": "Una historia atemporal de autodescubrimiento y conexión humana, Moonlight narra la vida de un joven afroamericano desde la infancia hasta la edad adulta mientras lucha por encontrar su lugar en el mundo mientras crece en un barrio difícil de Miami.",
-    "imagen": "https://example.com/imagen_moonlight.jpg",
+    "imagen": "https://pics.filmaffinity.com/moonlight-232276883-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=9NJj12tJzqc"
   },
   {
     "id": 14,
-    "nombre": "The Grand Budapest Hotel",
+    "nombre": "El Gran Hotel Budapest",
     "sinopsis": "El conserje de un famoso hotel europeo entre guerras y su amistad con un joven empleado que se convierte en su protegido. La historia implica el robo y la recuperación de una pintura renacentista invaluable y la batalla por una enorme fortuna familiar.",
-    "imagen": "https://example.com/imagen_the_grand_budapest_hotel.jpg",
+    "imagen": "https://pics.filmaffinity.com/the_grand_budapest_hotel-247331769-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=1Fg5iWmQjwk"
   },
   {
     "id": 15,
     "nombre": "Her",
     "sinopsis": "En un futuro cercano, un hombre solitario se enamora de su sistema operativo informático, diseñado para satisfacer todas sus necesidades.",
-    "imagen": "https://example.com/imagen_her.jpg",
+    "imagen": "https://pics.filmaffinity.com/her-716403893-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=WzV6mXIOVl4"
   },
   {
     "id": 16,
-    "nombre": "Get Out",
+    "nombre": "Déjame salir",
     "sinopsis": "Un joven afroamericano visita a la familia de su novia blanca, donde descubre la inquietante razón detrás de la invitación.",
-    "imagen": "https://example.com/imagen_get_out.jpg",
+    "imagen": "https://pics.filmaffinity.com/get_out-290175782-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=DzfpyUB60YY"
   },
   {
     "id": 17,
-    "nombre": "The Social Network",
+    "nombre": "La Red Social",
     "sinopsis": "La historia de la creación de Facebook por Mark Zuckerberg y las batallas legales que siguieron.",
-    "imagen": "https://example.com/imagen_the_social_network.jpg",
+    "imagen": "https://pics.filmaffinity.com/the_social_network-421032493-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=lB95KLmpLR4"
   },
   {
     "id": 18,
-    "nombre": "Inception",
-    "sinopsis": "Un ladrón que posee la habilidad de entrar en los sueños de las personas y robar sus secretos del subconsciente se ve envuelto en un complejo plan para plantar una idea en la mente de alguien.",
-    "imagen": "https://example.com/imagen_inception.jpg",
-    "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+    "nombre": "Gladiator",
+    "sinopsis": "En el año 180, el Imperio Romano domina todo el mundo conocido. Tras una gran victoria sobre los bárbaros del norte, el anciano emperador Marco Aurelio decide transferir el poder a Máximo.",
+    "imagen": "https://pics.filmaffinity.com/gladiator-331143379-mmed.jpg",
+    "trailer": "https://www.youtube.com/watch?v=7oO7qD6D7Lg"
   },
   {
     "id": 19,
-    "nombre": "Mad Max: Fury Road",
-    "sinopsis": "En un desierto post-apocalíptico, Max se une a Furiosa, una guerrera que busca cruzar el desierto hacia su tierra natal, huyendo de un tirano que los persigue.",
-    "imagen": "https://example.com/imagen_mad_max_fury_road.jpg",
-    "trailer": "https://www.youtube.com/watch?v=hEJnMQG9ev8"
+    "nombre": "El padrino",
+    "sinopsis": "América, años 40. Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York ,el jefe de otra banda ordena su asesinato. Empieza entonces una violenta y cruenta guerra entre las familias mafiosas.",
+    "imagen": "https://pics.filmaffinity.com/the_godfather-488102675-mmed.jpg",
+    "trailer": "https://www.youtube.com/watch?v=gCVj1LeYnsc"
   },
   {
     "id": 20,
     "nombre": "Whiplash",
     "sinopsis": "Un joven baterista ambicioso comienza a asistir a una prestigiosa academia de música y se encuentra bajo la tutela de un instructor que no se detendrá ante nada para realizar el potencial de sus estudiantes.",
-    "imagen": "https://example.com/imagen_whiplash.jpg",
+    "imagen": "https://pics.filmaffinity.com/whiplash-344887410-mmed.jpg",
     "trailer": "https://www.youtube.com/watch?v=7d_jQycdQGo"
   }
 ]
