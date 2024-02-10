@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        editTextUsername = findViewById(R.id.editTextUserLogin) // Cambia el ID si es necesario
+        editTextUsername = findViewById(R.id.editTextUserLogin)
         editTextPassword = findViewById(R.id.editTextPassLogin)
         buttonLogin = findViewById(R.id.buttonLogin)
         textViewRegister = findViewById(R.id.textViewRegister)

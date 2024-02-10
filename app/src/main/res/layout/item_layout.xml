@@ -11,7 +11,7 @@
         android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@mipmap/ic_launcher" /> <!-- Cambia ic_launcher por tu drawable -->
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/textViewNombre"

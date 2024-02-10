@@ -1,6 +1,6 @@
 package com.example.eval2_ordinaria_proyecto_prctica
 
-import android.annotation.SuppressLint
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
