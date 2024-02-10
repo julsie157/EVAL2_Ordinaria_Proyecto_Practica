@@ -1,12 +1,13 @@
 package com.example.eval2_ordinaria_proyecto_prctica
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class PerfilActivity : AppCompatActivity() {
 
@@ -16,15 +17,9 @@ class PerfilActivity : AppCompatActivity() {
     private lateinit var textViewPasswordPerfil: TextView
     private lateinit var textViewUserPerfil: TextView
 
-    private lateinit var auth: FirebaseAuth
-    private lateinit var db: FirebaseFirestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
-
-        auth = FirebaseAuth.getInstance()
-        db = FirebaseFirestore.getInstance()
 
         imageViewPerfil = findViewById(R.id.imageViewPerfil)
         buttonAtras = findViewById(R.id.botonAtrasInfo)
@@ -40,24 +35,30 @@ class PerfilActivity : AppCompatActivity() {
     }
 
     private fun cargarInformacionUsuario() {
-        val user = auth.currentUser
-        user?.let {
-            textViewEmailPerfil.text = user.email
-            textViewPasswordPerfil.text = "********"
+        val sharedPref = getSharedPreferences("UserInfo", Context.MODE_PRIVATE)
+        val currentUser = sharedPref.getString("currentUser", null)
 
-            val userId = user.uid
-            db.collection("users").document(userId).get()
-                .addOnSuccessListener { document ->
-                    if (document != null) {
-                        val username = document.getString("username")
-                        textViewUserPerfil.text = username
-                    } else {
-                        textViewUserPerfil.text = "Usuario no encontrado"
-                    }
+        // Lee el archivo y busca la línea con la información del usuario actual
+        try {
+            val fis = openFileInput("Usuarios.txt")
+            val isr = InputStreamReader(fis)
+            val bufferedReader = BufferedReader(isr)
+            var userInfo: String?
+
+            while (bufferedReader.readLine().also { userInfo = it } != null) {
+                val parts = userInfo!!.split(",")
+                if (parts.size >= 3 && parts[0] == currentUser) {
+                    textViewUserPerfil.text = parts[0]
+                    textViewEmailPerfil.text = parts[1]
+                    textViewPasswordPerfil.text = "**********"
+                    break // Sal del bucle una vez que encuentres la información del usuario
                 }
-                .addOnFailureListener { exception ->
-                    textViewUserPerfil.text = "Error al cargar el usuario"
-                }
+            }
+            fis.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            textViewUserPerfil.text = "Error al cargar la información"
         }
     }
+
 }

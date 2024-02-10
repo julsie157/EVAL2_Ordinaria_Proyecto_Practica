@@ -1,18 +1,17 @@
 package com.example.eval2_ordinaria_proyecto_prctica
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import java.io.FileOutputStream
+import java.io.IOException
 
 class RegistroActivity : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var editTextUser: EditText
@@ -21,10 +20,6 @@ class RegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
-
-
-        auth = Firebase.auth
-
 
         editTextEmail = findViewById(R.id.editTextEmailRegister)
         editTextPassword = findViewById(R.id.editTextPasswordRegister)
@@ -37,7 +32,7 @@ class RegistroActivity : AppCompatActivity() {
             val username = editTextUser.text.toString()
 
             if (validateForm(email, password, username)) {
-                registerUser(email, password)
+                saveUserToFile(username, email, password)
             }
         }
     }
@@ -55,16 +50,18 @@ class RegistroActivity : AppCompatActivity() {
         return true
     }
 
-    private fun registerUser(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Registro exitoso.", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, LoginActivity::class.java))
-                    finish()
-                } else {
-                    Toast.makeText(this, "Registro fallido: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
+    private fun saveUserToFile(username: String, email: String, password: String) {
+        val userInfo = "$username,$email,$password\n"
+        try {
+            openFileOutput("Usuarios.txt", Context.MODE_APPEND).use { fos ->
+                fos.write(userInfo.toByteArray())
             }
+            Toast.makeText(this, "Registro exitoso.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        } catch (e: IOException) {
+            e.printStackTrace()
+            Toast.makeText(this, "Error al guardar los datos del usuario.", Toast.LENGTH_SHORT).show()
+        }
     }
 }

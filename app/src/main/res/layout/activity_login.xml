@@ -12,7 +12,7 @@
         android:layout_width="325dp"
         android:layout_height="325dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCorreoLogin"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUserLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -35,7 +35,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/poppins_medium"
         android:text="Login"
@@ -44,26 +44,14 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/poppins"
-        android:text="Restaurar Contraseña?"
-        android:textColor="#78909C"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextPassLogin"
         android:layout_width="325dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/input_bg"
         android:backgroundTint="#fff"
         android:drawableLeft="@drawable/pass"
@@ -76,12 +64,12 @@
         android:padding="8dp"
         android:textColorHint="#37474F"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextCorreoLogin"
+        android:id="@+id/editTextUserLogin"
         android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
@@ -92,7 +80,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:foregroundTint="#fff"
-        android:hint="Correo"
+        android:hint="Username"
         android:inputType="textPersonName"
         android:padding="8dp"
         android:textColorHint="#37474F"

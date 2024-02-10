@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Breaking Bad",
+    "sinopsis": "Un profesor de química de secundaria diagnosticado con cáncer terminal se asocia con un exestudiante para fabricar y vender metanfetamina azul de alta pureza, con el fin de asegurar el futuro financiero de su familia.",
+    "imagen": "https://example.com/imagen_breaking_bad.jpg",
+    "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY"
+  },
+  {
+    "id": 2,
+    "nombre": "Game of Thrones",
+    "sinopsis": "Nueve familias nobles luchan por el control sobre las tierras de Westeros, mientras un antiguo enemigo regresa después de estar inactivo durante miles de años.",
+    "imagen": "https://example.com/imagen_game_of_thrones.jpg",
+    "trailer": "https://www.youtube.com/watch?v=bjqEWgDVPe0"
+  },
+  {
+    "id": 3,
+    "nombre": "Stranger Things",
+    "sinopsis": "Cuando un niño desaparece, sus amigos, familia y la policía local se ven envueltos en un misterio involucrando experimentos secretos del gobierno, fuerzas sobrenaturales, y una extraña niña.",
+    "imagen": "https://example.com/imagen_stranger_things.jpg",
+    "trailer": "https://www.youtube.com/watch?v=mnd7sFt5c3A"
+  },
+  {
+    "id": 4,
+    "nombre": "The Crown",
+    "sinopsis": "Esta serie dramática sigue las rivalidades políticas y el romance de la Reina Isabel II, así como los eventos históricos que dieron forma a la segunda mitad del siglo XX.",
+    "imagen": "https://example.com/imagen_the_crown.jpg",
+    "trailer": "https://www.youtube.com/watch?v=JWtnJjn6ng0"
+  },
+  {
+    "id": 5,
+    "nombre": "Black Mirror",
+    "sinopsis": "Una serie de antología que gira en torno a un grupo de personas y su relación personal con la tecnología y cómo esta afecta sus vidas de manera inesperada y aterradora.",
+    "imagen": "https://example.com/imagen_black_mirror.jpg",
+    "trailer": "https://www.youtube.com/watch?v=jDiYGjp5iFg"
+  },
+  {
+    "id": 6,
+    "nombre": "The Witcher",
+    "sinopsis": "Geralt de Rivia, un cazador de monstruos solitario, lucha por encontrar su lugar en un mundo donde las personas suelen ser más malvadas que las bestias.",
+    "imagen": "https://example.com/imagen_the_witcher.jpg",
+    "trailer": "https://www.youtube.com/watch?v=ndl1W4ltcmg"
+  },
+  {
+    "id": 7,
+    "nombre": "The Mandalorian",
+    "sinopsis": "En las fronteras de la galaxia, lejos de la autoridad de la Nueva República, un solitario pistolero sigue el camino del cazarrecompensas en el mundo exterior, después de la caída del Imperio.",
+    "imagen": "https://example.com/imagen_the_mandalorian.jpg",
+    "trailer": "https://www.youtube.com/watch?v=aOC8E8z_ifw"
+  },
+  {
+    "id": 8,
+    "nombre": "The Boys",
+    "sinopsis": "Un grupo de vigilantes se propone derrotar a los superhéroes corruptos que abusan de sus superpoderes.",
+    "imagen": "https://example.com/imagen_the_boys.jpg",
+    "trailer": "https://www.youtube.com/watch?v=tcrNsIaQkb4"
+  },
+  {
+    "id": 9,
+    "nombre": "Westworld",
+    "sinopsis": "En un parque de atracciones futurista, los visitantes pueden sumergirse en cualquier fantasía con androides en un mundo salvaje del oeste, pero un levantamiento de robots está a punto de ocurrir.",
+    "imagen": "https://example.com/imagen_westworld.jpg",
+    "trailer": "https://www.youtube.com/watch?v=1YqG1X38cS8"
+  },
+  {
+    "id": 10,
+    "nombre": "Chernobyl",
+    "sinopsis": "La verdadera historia de una de las peores catástrofes provocadas por el hombre: el accidente nuclear de Chernóbil. La serie sigue a los hombres y mujeres que actuaron heroicamente para mitigar los daños catastróficos.",
+    "imagen": "https://example.com/imagen_chernobyl.jpg",
+    "trailer": "https://www.youtube.com/watch?v=s9APLXM9Ei8"
+  },
+  {
+    "id": 11,
+    "nombre": "Sherlock",
+    "sinopsis": "Una versión moderna de las historias de Sherlock Holmes, con el detective consultor Sherlock Holmes y el doctor John Watson resolviendo crímenes en el Londres del siglo 21.",
+    "imagen": "https://example.com/imagen_sherlock.jpg",
+    "trailer": "https://www.youtube.com/watch?v=qlcWFoNqZHc"
+  },
+  {
+    "id": 12,
+    "nombre": "Peaky Blinders",
+    "sinopsis": "Una saga de gángsters ambientada en Birmingham, Inglaterra, en 1919, centrada en una banda que cose sus navajas en las viseras de sus gorras, y su feroz jefe Tommy Shelby.",
+    "imagen": "https://example.com/imagen_peaky_blinders.jpg",
+    "trailer": "https://www.youtube.com/watch?v=oVzVdvGIC7U"
+  },
+  {
+    "id": 13,
+    "nombre": "The Umbrella Academy",
+    "sinopsis": "Una familia disfuncional de superhéroes se reúne para resolver el misterio de la muerte de su padre, la amenaza del apocalipsis y más.",
+    "imagen": "https://example.com/imagen_the_umbrella_academy.jpg",
+    "trailer": "https://www.youtube.com/watch?v=0DAmWHxeoKw"
+  },
+  {
+    "id": 14,
+    "nombre": "Mindhunter",
+    "sinopsis": "En los primeros días del perfil criminal y la psicología del FBI, dos agentes expanden la ciencia delictiva al sumergirse en la psique de asesinos en serie y violadores.",
+    "imagen": "https://example.com/imagen_mindhunter.jpg",
+    "trailer": "https://www.youtube.com/watch?v=7gZCfRD_zWE"
+  },
+  {
+    "id": 15,
+    "nombre": "Stranger",
+    "sinopsis": "Con la ayuda de una fiscal sin emociones, un fiscal con pérdida de sensibilidad trata de descubrir la corrupción en su oficina y resolver un asesinato.",
+    "imagen": "https://example.com/imagen_stranger.jpg",
+    "trailer": "https://www.youtube.com/watch?v=yGk2TojOd-4"
+  },
+  {
+    "id": 16,
+    "nombre": "Fargo",
+    "sinopsis": "Inspirada en la película homónima de los Coen, esta serie sigue varios relatos de crimen y misterio que ocurren en y alrededor de Fargo, Dakota del Norte.",
+    "imagen": "https://example.com/imagen_fargo.jpg",
+    "trailer": "https://www.youtube.com/watch?v=E7ukKc3V8L8"
+  },
+  {
+    "id": 17,
+    "nombre": "Better Call Saul",
+    "sinopsis": "Antes de convertirse en el abogado de Walter White, Saul Goodman es conocido como Jimmy McGill, un pequeño abogado luchando por defender su destino y su sentido de la moral en un mundo hostil.",
+    "imagen": "https://example.com/imagen_better_call_saul.jpg",
+    "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc"
+  },
+  {
+    "id": 18,
+    "nombre": "Ozark",
+    "sinopsis": "Un asesor financiero arrastra a su familia desde Chicago a los Ozarks de Missouri, donde debe lavar 500 millones de dólares en cinco años para apaciguar a un capo de la droga.",
+    "imagen": "https://example.com/imagen_ozark.jpg",
+    "trailer": "https://www.youtube.com/watch?v=5hAXVqrljbs"
+  },
+  {
+    "id": 19,
+    "nombre": "The Expanse",
+    "sinopsis": "En un futuro donde la humanidad ha colonizado el Sistema Solar, una conspiración compleja amenaza la frágil paz. Equipos de distintas facciones trabajan juntos para descubrir la verdad detrás de misterios que podrían incitar la guerra a una escala nunca antes vista.",
+    "imagen": "https://example.com/imagen_the_expanse.jpg",
+    "trailer": "https://www.youtube.com/watch?v=kQuTAPWJxNo"
+  },
+  {
+    "id": 20,
+    "nombre": "Black Mirror",
+    "sinopsis": "Una serie antológica que se centra en la inquietud colectiva respecto al mundo moderno, explorando temas oscuros y satíricos que se relacionan con la paranoia tecnológica contemporánea.",
+    "imagen": "https://example.com/imagen_black_mirror.jpg",
+    "trailer": "https://www.youtube.com/watch?v=jROLrhQkK78"
+  }  
+]
