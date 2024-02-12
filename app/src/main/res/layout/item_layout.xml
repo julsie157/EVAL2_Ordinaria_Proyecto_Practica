@@ -17,12 +17,13 @@
         android:id="@+id/textViewNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/imageViewImagen"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
-        android:text="Nombre de la Serie/Película" />
+        android:text="Nombre de la Serie/Película"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewImagen"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewSinopsis"
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="¡Pulsa aqui para mas informacón!"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
