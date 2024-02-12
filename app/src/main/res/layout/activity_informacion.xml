@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoapp"
     tools:context=".InfoActivity">
 
     <TextView
@@ -30,13 +31,20 @@
 
     <Button
         android:id="@+id/botonPlayInfo"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F40303"
+        android:fontFamily="@font/poppins_medium"
+        android:text="PLAY"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="@id/imageViewPicture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imageViewPicture"
-        android:layout_marginEnd="16dp"/>
+        app:strokeColor="@color/white" />
 
     <TextView
         android:id="@+id/textViewSinopsis"
@@ -51,12 +59,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewPicture" />
 
     <Button
+        style="?attr/materialButtonOutlinedStyle"
         android:id="@+id/botonAtrasInfo"
         android:layout_width="139dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#E91E63"
+        android:fontFamily="@font/poppins_medium"
         android:text="Atrás"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.926"

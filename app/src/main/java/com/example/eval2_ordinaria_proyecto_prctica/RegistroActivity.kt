@@ -1,5 +1,6 @@
 package com.example.eval2_ordinaria_proyecto_prctica
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +17,9 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var editTextPassword: EditText
     private lateinit var editTextUser: EditText
     private lateinit var buttonConfirmar: Button
+    private lateinit var buttonAtras: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
@@ -25,6 +28,7 @@ class RegistroActivity : AppCompatActivity() {
         editTextPassword = findViewById(R.id.editTextPasswordRegister)
         editTextUser = findViewById(R.id.editTextUserRegister)
         buttonConfirmar = findViewById(R.id.buttonConfirmar)
+        buttonAtras = findViewById(R.id.botonAtrasReggistro)
 
         buttonConfirmar.setOnClickListener {
             val email = editTextEmail.text.toString()
@@ -35,6 +39,11 @@ class RegistroActivity : AppCompatActivity() {
                 saveUserToFile(username, email, password)
             }
         }
+
+        buttonAtras.setOnClickListener {
+            finish()
+        }
+
     }
 
     private fun validateForm(email: String, password: String, username: String): Boolean {

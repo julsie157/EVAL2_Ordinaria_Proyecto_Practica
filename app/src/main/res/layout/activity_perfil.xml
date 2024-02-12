@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7"
+    android:background="@drawable/fondoapp"
     tools:context=".PerfilActivity" >
 
 
@@ -20,11 +20,12 @@
 
 
     <Button
-        android:id="@+id/botonAtrasInfo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/botonAtrasPerfil"
         android:layout_width="131dp"
         android:layout_height="47dp"
         android:layout_marginBottom="68dp"
-        android:background="@drawable/btn_bg"
+        android:backgroundTint="#E91E63"
         android:fontFamily="@font/poppins_medium"
         android:text="Atrás"
         android:textAllCaps="false"
@@ -33,7 +34,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/white"/>
 
     <TextView
         android:id="@+id/textViewEmailPerfil"

@@ -17,18 +17,18 @@ class InfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacion)
 
-        // Extrae los datos del Intent
+
         val nombre = intent.getStringExtra("nombre") ?: ""
         val sinopsis = intent.getStringExtra("sinopsis") ?: ""
         val imagen = intent.getStringExtra("imagen")
         val trailer = intent.getStringExtra("trailer")
 
-        // Encuentra las vistas por ID
+
         val textViewNombre: TextView = findViewById(R.id.textViewNombre)
         val textViewSinopsis: TextView = findViewById(R.id.textViewSinopsis)
         val imageViewImagen: ImageView = findViewById(R.id.imageViewPicture)
         val buttonTrailer: Button = findViewById(R.id.botonPlayInfo)
-
+        val buttonAtras: Button = findViewById(R.id.botonAtrasInfo)
 
         textViewNombre.text = nombre
         textViewSinopsis.text = sinopsis
@@ -42,6 +42,10 @@ class InfoActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(it))
                 startActivity(intent)
             }
+        }
+
+        buttonAtras.setOnClickListener {
+            finish()
         }
     }
 }

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7"
-    tools:context=".LoginActivity" >
+    android:background="@drawable/fondoapp"
+    tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageViewLogin"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/poppins"
         android:text="No tienes Ya una cuenta?"
-        android:textColor="#78909C"
+        android:textColor="@color/white"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,10 +33,11 @@
 
     <Button
         android:id="@+id/buttonLogin"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:background="@drawable/btn_bg"
+        android:backgroundTint="#E91E63"
         android:fontFamily="@font/poppins_medium"
         android:text="Login"
         android:textAllCaps="false"
@@ -45,7 +46,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/white" />
 
     <EditText
         android:id="@+id/editTextPassLogin"
@@ -90,14 +92,16 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
     <TextView
         android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#fff"
         android:fontFamily="@font/poppins_medium"
+        android:foregroundTint="#fff"
         android:text="@string/crear_cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView" />
