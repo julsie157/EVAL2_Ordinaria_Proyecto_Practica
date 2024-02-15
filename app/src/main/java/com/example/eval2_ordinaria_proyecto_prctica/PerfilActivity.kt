@@ -12,6 +12,10 @@ import java.io.InputStreamReader
 
 class PerfilActivity : AppCompatActivity() {
 
+
+    //Añadir Un apartado de Editar Info no esencial
+    //Añadir un par o tres cosas(direccion,Edad,CP)
+    //Opcion Cambiar Avatar entre X opciones
     private lateinit var imageViewPerfil: ImageView
     private lateinit var buttonAtras: Button
     private lateinit var textViewEmailPerfil: TextView
@@ -52,7 +56,7 @@ class PerfilActivity : AppCompatActivity() {
                 if (parts.size >= 3 && parts[0] == currentUser) {
                     textViewUserPerfil.text = parts[0]
                     textViewEmailPerfil.text = parts[1]
-                    textViewPasswordPerfil.text = "**********"
+                    textViewPasswordPerfil.text = parts[2]
                     break
                 }
             }

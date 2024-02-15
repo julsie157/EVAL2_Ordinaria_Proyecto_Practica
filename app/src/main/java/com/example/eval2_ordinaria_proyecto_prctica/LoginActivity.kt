@@ -26,6 +26,9 @@ class LoginActivity : AppCompatActivity() {
         buttonLogin = findViewById(R.id.buttonLogin)
         textViewRegister = findViewById(R.id.textViewRegister)
 
+
+
+        //AQUI AÑADIR CONTROL DE ERRORES
         buttonLogin.setOnClickListener {
             val username = editTextUsername.text.toString().trim()
             val password = editTextPassword.text.toString().trim()
