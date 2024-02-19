@@ -15,7 +15,7 @@ class InfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_informacion)
+        setContentView(R.layout.layout_infoelementos)
 
 
         val nombre = intent.getStringExtra("nombre") ?: ""

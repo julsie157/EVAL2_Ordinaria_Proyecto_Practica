@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.io.FileOutputStream
 import java.io.IOException
 
 class RegistroActivity : AppCompatActivity() {
@@ -22,7 +21,7 @@ class RegistroActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro)
+        setContentView(R.layout.layout_registro)
 
 
         editTextEmail = findViewById(R.id.editTextEmailRegister)
@@ -36,8 +35,8 @@ class RegistroActivity : AppCompatActivity() {
             val password = editTextPassword.text.toString()
             val username = editTextUser.text.toString()
 
-            if (validateForm(email, password, username)) {
-                saveUserToFile(username, email, password)
+            if (formaValida(email, password, username)) {
+                guardarInfo(username, email, password)
             }
         }
 
@@ -47,7 +46,7 @@ class RegistroActivity : AppCompatActivity() {
 
     }
 
-    private fun validateForm(email: String, password: String, username: String): Boolean {
+    private fun formaValida(email: String, password: String, username: String): Boolean {
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(this, "Ingrese un correo electrónico válido.", Toast.LENGTH_SHORT).show()
             return false
@@ -60,10 +59,10 @@ class RegistroActivity : AppCompatActivity() {
         return true
     }
 
-    private fun saveUserToFile(username: String, email: String, password: String) {
+    private fun guardarInfo(username: String, email: String, password: String) {
         val userInfo = "$username,$email,$password\n"
         try {
-            openFileOutput("Usuarios.txt", Context.MODE_APPEND).use { fos ->
+            openFileOutput("FicheroUsuarios.txt", Context.MODE_APPEND).use { fos ->
                 fos.write(userInfo.toByteArray())
             }
             Toast.makeText(this, "Registro exitoso.", Toast.LENGTH_SHORT).show()

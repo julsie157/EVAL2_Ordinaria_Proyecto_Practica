@@ -24,7 +24,7 @@ class PrincipalActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_principal)
+        setContentView(R.layout.layout_principal)
 
         userIcon = findViewById(R.id.userIcon)
         seriesIcon = findViewById(R.id.seriesIcon)

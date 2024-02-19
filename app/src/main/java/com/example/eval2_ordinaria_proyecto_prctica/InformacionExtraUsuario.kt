@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-data class UserInputs(
+data class Datos(
     var nombre: String = "",
     var apellidos: String = "",
     var localidad: String = "",
@@ -19,7 +19,7 @@ data class UserInputs(
 
 class InformacionExtraUsuario : AppCompatActivity() {
     companion object {
-        var datosTemporales: UserInputs? = null
+        var datosTemporales: Datos? = null
     }
 
     private lateinit var avatarImageView: ImageView
@@ -35,7 +35,7 @@ class InformacionExtraUsuario : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_infouser)
+        setContentView(R.layout.layout_infouser)
 
         avatarImageView = findViewById(R.id.avatarImageView)
         usernameTextView = findViewById(R.id.UsuarioDeInfo)
@@ -63,7 +63,7 @@ class InformacionExtraUsuario : AppCompatActivity() {
         }
 
         saveButton.setOnClickListener {
-            datosTemporales = UserInputs(
+            datosTemporales = Datos(
                 nombre = nombreEditText.text.toString(),
                 apellidos = apellidosEditText.text.toString(),
                 localidad = localidadEditText.text.toString(),
@@ -73,9 +73,5 @@ class InformacionExtraUsuario : AppCompatActivity() {
             finish()
             Toast.makeText(this, "Datos guardados", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 }

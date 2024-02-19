@@ -28,7 +28,7 @@ class PerfilActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_perfil)
+        setContentView(R.layout.layout_perfil)
 
         imagen = findViewById(R.id.imageViewPerfil)
         recycler = findViewById(R.id.recyclerPerfil)
@@ -64,7 +64,6 @@ class PerfilActivity : AppCompatActivity() {
             val photoId = sharedPreferences.getInt("photoId", R.drawable.perfil)
             intent.putExtra("photoId", photoId)
             startActivity(intent)
-
         }
 
 
@@ -76,7 +75,7 @@ class PerfilActivity : AppCompatActivity() {
 
     private fun cargarAvatarSeleccionado() {
         val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
-        val photoId = sharedPreferences.getInt("photoId", R.drawable.perfil) // R.drawable.perfil es el avatar predeterminado
+        val photoId = sharedPreferences.getInt("photoId", R.drawable.perfil)
         imagen.setImageResource(photoId)
     }
 
@@ -85,7 +84,7 @@ class PerfilActivity : AppCompatActivity() {
         val currentUser = sharedPref.getString("currentUser", null)
 
         try {
-            val fis = openFileInput("Usuarios.txt")
+            val fis = openFileInput("FicheroUsuarios.txt")
             val isr = InputStreamReader(fis)
             val bufferedReader = BufferedReader(isr)
             var userInfo: String?

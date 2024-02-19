@@ -9,9 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.io.BufferedReader
 import java.io.InputStreamReader
-
 class LoginActivity : AppCompatActivity() {
-
     private lateinit var editTextUsername: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
@@ -19,19 +17,16 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
+        setContentView(R.layout.layout_login)
         editTextUsername = findViewById(R.id.editTextUserLogin)
         editTextPassword = findViewById(R.id.editTextPassLogin)
         buttonLogin = findViewById(R.id.buttonLogin)
         textViewRegister = findViewById(R.id.textViewRegister)
 
-
-
         buttonLogin.setOnClickListener {
             val username = editTextUsername.text.toString().trim()
             val password = editTextPassword.text.toString().trim()
-            when (val loginResult = loginUser(username, password)) {
+            when (val loginResult = loguearUsuario(username, password)) {
                 LoginResult.SUCCESS -> {
                     val intent = Intent(this, PrincipalActivity::class.java)
                     startActivity(intent)
@@ -56,10 +51,9 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    private fun loginUser(username: String, password: String): LoginResult {
+    private fun loguearUsuario(username: String, password: String): LoginResult {
         try {
-            openFileInput("Usuarios.txt").use { inputStream ->
+            openFileInput("FicheroUsuarios.txt").use { inputStream ->
                 InputStreamReader(inputStream).use { isr ->
                     BufferedReader(isr).use { reader ->
                         var line: String?
@@ -89,12 +83,10 @@ class LoginActivity : AppCompatActivity() {
             return LoginResult.ERROR
         }
     }
-
     enum class LoginResult {
         SUCCESS,
         USER_NOT_FOUND,
         INCORRECT_PASSWORD,
         ERROR
     }
-
 }
