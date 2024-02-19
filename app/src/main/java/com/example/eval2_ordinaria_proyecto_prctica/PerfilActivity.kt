@@ -1,23 +1,24 @@
 package com.example.eval2_ordinaria_proyecto_prctica
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class PerfilActivity : AppCompatActivity() {
 
-
-    //Añadir Un apartado de Editar Info no esencial
-    //Añadir un par o tres cosas(direccion,Edad,CP)
-    //Opcion Cambiar Avatar entre X opciones
-    private lateinit var imageViewPerfil: ImageView
+    private lateinit var imagen: ImageView
+    private lateinit var recycler: RecyclerView
     private lateinit var buttonAtras: Button
+    private lateinit var textViewElegir: TextView
     private lateinit var textViewEmailPerfil: TextView
     private lateinit var textViewPasswordPerfil: TextView
     private lateinit var textViewUserPerfil: TextView
@@ -27,23 +28,47 @@ class PerfilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
 
-        imageViewPerfil = findViewById(R.id.imageViewPerfil)
+        imagen = findViewById(R.id.imageViewPerfil)
+        recycler = findViewById(R.id.recyclerPerfil)
         buttonAtras = findViewById(R.id.botonAtrasPerfil)
         textViewEmailPerfil = findViewById(R.id.textViewEmailPerfil)
         textViewPasswordPerfil = findViewById(R.id.textViewPasswordPerfil)
         textViewUserPerfil = findViewById(R.id.textViewUserPerfil)
+        textViewElegir = findViewById(R.id.textViewElegir)
 
+        cargarAvatarSeleccionado()
         cargarInformacionUsuario()
+
+
+        recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val adapter = Adaptador(photos) { photo ->
+            imagen.setImageResource(photo)
+
+            val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+            sharedPreferences.edit().putInt("photoId", photo).apply()
+            setResult(Activity.RESULT_OK)
+        }
+        recycler.adapter = adapter
+
 
         buttonAtras.setOnClickListener {
             finish()
         }
     }
 
+    private val photos = listOf(
+        R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar4, R.drawable.avatar5, R.drawable.avatar6,
+    )
+
+    private fun cargarAvatarSeleccionado() {
+        val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+        val photoId = sharedPreferences.getInt("photoId", R.drawable.perfil) // R.drawable.perfil es el avatar predeterminado
+        imagen.setImageResource(photoId)
+    }
+
     private fun cargarInformacionUsuario() {
         val sharedPref = getSharedPreferences("UserInfo", Context.MODE_PRIVATE)
         val currentUser = sharedPref.getString("currentUser", null)
-
 
         try {
             val fis = openFileInput("Usuarios.txt")
@@ -56,7 +81,7 @@ class PerfilActivity : AppCompatActivity() {
                 if (parts.size >= 3 && parts[0] == currentUser) {
                     textViewUserPerfil.text = parts[0]
                     textViewEmailPerfil.text = parts[1]
-                    textViewPasswordPerfil.text = parts[2]
+                    textViewPasswordPerfil.text = "*******"
                     break
                 }
             }
@@ -66,5 +91,4 @@ class PerfilActivity : AppCompatActivity() {
             textViewUserPerfil.text = "Error al cargar la información"
         }
     }
-
 }

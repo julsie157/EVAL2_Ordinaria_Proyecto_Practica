@@ -28,16 +28,26 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-        //AQUI AÑADIR CONTROL DE ERRORES
         buttonLogin.setOnClickListener {
             val username = editTextUsername.text.toString().trim()
             val password = editTextPassword.text.toString().trim()
-            if (loginUser(username, password)) {
-                val intent = Intent(this, PrincipalActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                Toast.makeText(this, "Autenticación fallida.", Toast.LENGTH_SHORT).show()
+            when (val loginResult = loginUser(username, password)) {
+                LoginResult.SUCCESS -> {
+                    val intent = Intent(this, PrincipalActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                LoginResult.USER_NOT_FOUND -> {
+                    Toast.makeText(this, "Usuario incorrecto.", Toast.LENGTH_SHORT).show()
+                }
+                LoginResult.INCORRECT_PASSWORD -> {
+                    Toast.makeText(this, "Contraseña incorrecta.", Toast.LENGTH_SHORT).show()
+                }
+                LoginResult.ERROR -> {
+                    Toast.makeText(this, "Error interno", Toast.LENGTH_SHORT).show()
+                }
+
+                else -> {}
             }
         }
 
@@ -47,31 +57,44 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginUser(username: String, password: String): Boolean {
+    private fun loginUser(username: String, password: String): LoginResult {
         try {
             openFileInput("Usuarios.txt").use { inputStream ->
                 InputStreamReader(inputStream).use { isr ->
                     BufferedReader(isr).use { reader ->
                         var line: String?
+                        var userFound = false
                         while (reader.readLine().also { line = it } != null) {
                             val userInfo = line!!.split(",")
-                            if (userInfo.size >= 3 && userInfo[0] == username && userInfo[2].trim() == password) {
-                                val sharedPref = getSharedPreferences("UserInfo", MODE_PRIVATE)
-                                with(sharedPref.edit()) {
-                                    putString("currentUser", username)
-                                    apply()
+                            if (userInfo.size >= 3 && userInfo[0] == username) {
+                                userFound = true
+                                if (userInfo[2].trim() == password) {
+                                    val sharedPref = getSharedPreferences("UserInfo", MODE_PRIVATE)
+                                    with(sharedPref.edit()) {
+                                        putString("currentUser", username)
+                                        apply()
+                                    }
+                                    return LoginResult.SUCCESS
+                                } else {
+                                    return LoginResult.INCORRECT_PASSWORD
                                 }
-                                return true
                             }
                         }
+                        return if (userFound) LoginResult.INCORRECT_PASSWORD else LoginResult.USER_NOT_FOUND
                     }
                 }
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(this, "Error al leer el archivo de usuarios.", Toast.LENGTH_SHORT).show()
+            return LoginResult.ERROR
         }
-        return false
+    }
+
+    enum class LoginResult {
+        SUCCESS,
+        USER_NOT_FOUND,
+        INCORRECT_PASSWORD,
+        ERROR
     }
 
 }

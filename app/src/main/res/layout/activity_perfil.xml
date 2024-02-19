@@ -8,23 +8,24 @@
     tools:context=".PerfilActivity" >
 
 
-    <ImageView
-        android:id="@+id/imageViewPerfil"
-        android:layout_width="199dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="50dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPerfil"
+        android:layout_width="178dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal"
         android:src="@drawable/perfil"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewElegir"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
-        style="?attr/materialButtonOutlinedStyle"
         android:id="@+id/botonAtrasPerfil"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="131dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#E91E63"
         android:fontFamily="@font/poppins_medium"
         android:text="Atrás"
@@ -35,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/white"/>
+        app:strokeColor="@color/white" />
 
     <TextView
         android:id="@+id/textViewEmailPerfil"
@@ -53,7 +54,7 @@
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageViewPerfil" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerPerfil" />
 
     <TextView
         android:id="@+id/textViewUserPerfil"
@@ -90,4 +91,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewUserPerfil" />
+
+    <ImageView
+        android:id="@+id/imageViewPerfil"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewElegir"
+        android:layout_width="135dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Elige Un avatar"
+        android:text="Elige Tu avatar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPerfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
