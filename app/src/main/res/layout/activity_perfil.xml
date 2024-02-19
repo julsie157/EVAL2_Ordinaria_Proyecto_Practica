@@ -33,10 +33,27 @@
         android:textColor="#fff"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintEnd_toStartOf="@+id/botonInfoAdicional"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/botonInfoAdicional"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="131dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#E91E63"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Info"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPasswordPerfil"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="@color/white"
+        tools:layout_editor_absoluteX="237dp" />
 
     <TextView
         android:id="@+id/textViewEmailPerfil"
