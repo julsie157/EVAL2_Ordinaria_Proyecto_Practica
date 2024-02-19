@@ -3,6 +3,7 @@ package com.example.eval2_ordinaria_proyecto_prctica
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -18,6 +19,7 @@ class PerfilActivity : AppCompatActivity() {
     private lateinit var imagen: ImageView
     private lateinit var recycler: RecyclerView
     private lateinit var buttonAtras: Button
+    private lateinit var buttonAdicional: Button
     private lateinit var textViewElegir: TextView
     private lateinit var textViewEmailPerfil: TextView
     private lateinit var textViewPasswordPerfil: TextView
@@ -31,6 +33,7 @@ class PerfilActivity : AppCompatActivity() {
         imagen = findViewById(R.id.imageViewPerfil)
         recycler = findViewById(R.id.recyclerPerfil)
         buttonAtras = findViewById(R.id.botonAtrasPerfil)
+        buttonAdicional = findViewById(R.id.botonInfoAdicional)
         textViewEmailPerfil = findViewById(R.id.textViewEmailPerfil)
         textViewPasswordPerfil = findViewById(R.id.textViewPasswordPerfil)
         textViewUserPerfil = findViewById(R.id.textViewUserPerfil)
@@ -54,6 +57,17 @@ class PerfilActivity : AppCompatActivity() {
         buttonAtras.setOnClickListener {
             finish()
         }
+
+        buttonAdicional.setOnClickListener{
+            val intent = Intent(this, InformacionExtraUsuario::class.java)
+            val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+            val photoId = sharedPreferences.getInt("photoId", R.drawable.perfil)
+            intent.putExtra("photoId", photoId)
+            startActivity(intent)
+
+        }
+
+
     }
 
     private val photos = listOf(

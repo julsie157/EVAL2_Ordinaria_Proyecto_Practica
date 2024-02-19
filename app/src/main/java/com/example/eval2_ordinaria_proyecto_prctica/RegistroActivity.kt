@@ -13,7 +13,6 @@ import java.io.IOException
 
 class RegistroActivity : AppCompatActivity() {
 
-    //Añadir poder cambiar el avatar entre 8 opciones o asi
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var editTextUser: EditText
